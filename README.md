@@ -13,3 +13,8 @@ The purpose of this project is to determine the contributing factors and predict
 5. smoker: Smoking
 6. region: the beneficiary's residential area in the US, northeast, southeast, southwest, northwest
 7. charges: Individual medical costs billed by health insurance
+
+## how to excecute medical insurance 
+'''python 
+python app.py
+'''
