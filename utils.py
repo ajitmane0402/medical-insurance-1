@@ -5,6 +5,7 @@ import json
 
 class  MedicalInsurance():
     def __init__(self):
+        self.variable = 100
         pass
 
     def __load_data(self):
@@ -23,7 +24,7 @@ class  MedicalInsurance():
         print('age,gender,bmi,children,smoker,region',age,gender,bmi,children,smoker,region)
 
         region_index = np.where(self.col_names == 'region_'+ region)[0][0]
-        # print("region_index",region_index)
+        
 
         gender = self.col_data['gender'][gender]
         smoker = self.col_data['smoker'][smoker]
@@ -37,6 +38,6 @@ class  MedicalInsurance():
         test_array[0,region_index] = 1
 
         predicted_price = self.model.predict(test_array)
-        print("predicted_price :",predicted_price)
+        print("predicted insurance charges :",predicted_price)
 
         return predicted_price
